@@ -1,0 +1,165 @@
+#parte3 {
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    margin: 0 auto 64px;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+}
+#parte3 header{
+    background:transparent;
+}
+#parte3 .cont-tit {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    z-index:1;
+    
+}
+#parte3 .epigrafe {
+    color: #666666;
+    font-family: 'MBCorpoSTextRegular';
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform:uppercase;
+}
+#parte3 .titulo {
+    color: #262626;
+    font-family: 'MBCorpoAScreen1Cond';
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 51px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+#parte3 .bajada {
+    color: #262626;
+    font-family:'MBCorpoSTextRegular';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 23px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+/* ESTILOS PARA EL VIDEO & IMAGEN */
+#parte3 .media {
+    display: flex;
+    justify-content: center;
+    width: 854px;
+    height: 480px;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+#parte3 iframe {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 19.33%, rgba(0, 0, 0, 0) 100%);
+  
+}
+#parte3 img {
+    width: 100%;
+    background: linear-gradient(180deg, #000000 19.33%, rgba(0, 0, 0, 0) 100%);
+  
+}
+@media (max-width: 991px){
+    #parte3 .cont-tit {
+        height: auto;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 950px) {
+    #parte3 .epigrafe {
+        font-size: 12px;
+        margin-bottom: 22px;
+    }
+    #parte3 .titulo {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    #parte3 .bajada {
+        font-size: 14px;
+        margin-bottom: 34px;
+    }
+    #parte3 .media {
+        width: 720px;
+        height: 380px;
+    }
+}
+@media (min-width: 520px) and (max-width: 720px) {
+    #parte3 {
+        margin-bottom: 70px;
+    }
+    #parte3 .epigrafe {
+        font-size: 12px;
+        line-height: 0;
+        margin-bottom: 16px;
+    }
+    #parte3 .titulo {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 auto 14px;
+    }
+    #parte3 .bajada {
+        font-size: 14px;
+        line-height: 16px;
+        width: 64%;
+        margin: 0 auto 30px;
+    }
+    #parte3 .media {
+        width: 520px;
+        height: 300px;
+    }
+}
+@media (max-width: 520px) {
+    #parte3{
+        margin-bottom: 24px;
+    }
+    #parte3 .epigrafe {
+        color: #666666;
+        font-family: 'MBCorpoSTextRegular';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        margin-bottom: 16px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-transform:uppercase;
+    }
+    #parte3 .titulo {
+        color: #232323;
+        font-family: 'MBCorpoAScreen1Cond';
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 31px;
+        max-width: 84%;
+        margin: 0 auto 16px;
+        text-align: center;
+    }
+    #parte3 .bajada {
+        color: #232323;
+        font-family:'MBCorpoSTextRegular';
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 18px;
+        width: 85%;
+        margin: 0 auto 24px;
+        text-align: center;
+    }
+    #parte3 .media {
+        width: 320px;
+        height: 200px;
+    }
+    
+}
+

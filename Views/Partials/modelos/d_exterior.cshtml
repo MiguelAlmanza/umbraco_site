@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+<section id="parte3" class="block-center">
+    <div class="link"></div>
+    <div class="auxi">
+        <header class="cont-tit">
+            @if(Model.Value("DEsection")!=null){
+            <p class="epigrafe">@Model.Value("DEsection")</p>
+            }
+            @if(Model.Value("DEtitle")!=null){
+            <h2 class="titulo">@Model.Value("DEtitle")</h2>
+            }
+            @if(Model.Value("DEparagraph")!=null){
+            <p class="bajada">@Model.Value("DEparagraph")</p>          
+            }
+        </header>
+        @{
+            var image = Model.Value<MediaWithCrops>("DEimage");
+            <!-- Si existe ID del VIDEO en Youtube -->
+            @if(Model.Value("DEyoutube")!=null&&!string.IsNullOrEmpty(Model.Value<string>("DEyoutube"))){
+            <div class="media">
+                <iframe src="https://www.youtube.com/embed/Model.Value("DEyoutube")" frameborder="0" webkitAllowFullScreen
+                    mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            }else if(Model.Value("DEUrlVideo")!=null){
+                <!-- Si existe URL del VIDEO en Youtube -->
+            <div class="media">
+                <iframe src="@Model.Value("DEUrlVideo")" frameborder="0" webkitAllowFullScreen
+                    mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            }else if(image!=null){
+            <div class="imag">
+                <img src="@image.GetCropUrl(width:950,height: 480)"
+                    alt="@image.Name"/>
+            </div>
+            }
+        }
+    </div>
+</section>

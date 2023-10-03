@@ -1,0 +1,58 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+<section id="parte4">
+    @{
+        var image = Model.Value<MediaWithCrops>("DIimage");
+        <div class="contenedor_left">
+            <div class="title_left">
+                @if(Model.Value("DItitle")!=null){
+                    <p class="epigrafe">@Model.Value("DItitle")</p>
+                }
+                @if(Model.Value("DIsection")!=null){
+                    <h2 class="titulo">@Model.Value("DIsection")</h2>
+                }
+                @if(Model.Value("DIparagraph")!=null){
+                    <p class="bajada">@Model.Value("DIparagraph")</p>
+                }
+                
+                @if (image != null)
+                {
+                    <div class="img_mobile">
+                        <img id="imag_mobil" src="@image.MediaUrl()" alt="@image.Name">
+                    </div>
+                    <div class="img_desktop_2">
+                        <img id="imag_desk_2" src="@image.MediaUrl()" alt="@image.Name">
+                    </div>
+                }
+            </div>
+            <ul class="contenedor">
+            @{
+                var items = Model.Value<IEnumerable<IPublishedElement>>("DIitems");
+
+                if (items != null) {
+                    int index = 1;
+                    foreach (var item in items)
+                    {
+                        var title = item.Value<string>("ItemTitle");
+                        var text = item.Value<string>("ItemText");
+                        if (!string.IsNullOrEmpty(title)&&!string.IsNullOrEmpty(text)){
+                            <li class="descripcion@index">
+                                <h3 class="sub_title@index">@title</h3>
+                                <p class="txt@index">@text</p>
+                            </li>
+                            index++;
+                        }
+                    }
+                }
+                
+            }
+                        
+            </ul>
+        </div>
+        @if (image != null){
+            <div class="img_desktop_1">
+                <img id="imag_desk_1" src="@image.MediaUrl()" alt="@image.Name">
+            </div>
+        }
+    }
+</section>

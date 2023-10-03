@@ -1,0 +1,62 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+
+<section id="banner" class="">
+    <div class="link"></div>
+    <div class="container_banner">
+        <figure class="hero__img-wrap">
+            @{
+                var image = Model.Value<MediaWithCrops>("bannerImageDesktop");
+                if (image != null)
+                {
+                    <img class="img-car" src="@image.MediaUrl()" alt="@image.Name">
+                    <img class="img_mobile" src="@image.GetCropUrl(width:300,height: 500)" alt="@image.Name">
+                }
+            }
+
+        </figure>
+        <div class="degradado_lateral"></div>
+        <div class="auxi">
+            <div class="hero__content">
+                <div class="tit">
+
+                    <h1 class="hero__tit">@Model.Value("bannertitle")</h1>
+
+                </div>
+                <div class="hero__wrap">
+                    <div class="hero__txt">
+                        <p class="hero__baj">
+
+                            <span class="bold">@Model.Value("Bannerparagraph1")</span>
+
+                        </p>
+                        <p class="hero__pref">@Model.Value("Bannerparagraph2")</p>
+                        <p class="hero__number">@Model.Value("bannerprice")</p>
+
+
+                    </div>
+
+                </div>
+                <div id="buttons" class="cont-btn">
+
+                    @{
+                        var links = Model.Value<IEnumerable<Link>>("bannerLinks");
+
+                        if (links != null && links.Any())
+                        {
+
+                            var index = 1;
+                            @foreach (var link in links)
+                            {
+                                <a href="@link.Url" class="btn-main @(index==1 ? "btn-lightblue":"")"
+                                    target="@link.Target">@link.Name</a>
+                                index += 1;
+
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

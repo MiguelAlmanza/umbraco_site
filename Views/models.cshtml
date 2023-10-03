@@ -1,0 +1,14 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Models>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+@section styles{
+	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/banner.css">
+	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/d_exterior.css">
+	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/d_interior.css">
+}
+@await Html.PartialAsync("modelos/banner")
+@await Html.PartialAsync("modelos/d_exterior")
+@await Html.PartialAsync("modelos/d_interior")
