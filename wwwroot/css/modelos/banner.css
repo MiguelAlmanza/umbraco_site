@@ -24,14 +24,14 @@
   height: 100%;
 }
 #banner .auxi {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 4vw 0;
-    max-width: 85%;
-    z-index: 10;
-    margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 4vw 0;
+  max-width: 85%;
+  z-index: 10;
+  margin: 0 auto;
 }
 #banner .hero__tit {
   color: #ffffff;
@@ -166,28 +166,28 @@
 }
 
 #banner .btn-main {
-    padding: 15px 30px;
-    color: #232323;
-    transition: 0.3s all ease;
-    font-size: 15px;
-    width: 419.98px;
-    height: 40.4px;
-    background: #fff;
-    font-size: 40px;
-    line-height: normal;
-    text-transform: uppercase;
-    display: grid;
-    place-items: center;
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 25px;
+  padding: 15px 30px;
+  color: #232323;
+  transition: 0.3s all ease;
+  font-size: 15px;
+  width: 419.98px;
+  height: 40.4px;
+  background: #fff;
+  font-size: 40px;
+  line-height: normal;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 #banner .btn-lightblue {
-    background-color: #000000;
-    color: #ffffff;
-    font-style: normal;
-    font-weight: 700;
+  background-color: #000000;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
 }
 
 #banner .btn-lightblue:hover {
@@ -263,7 +263,7 @@
 
 @media (max-width: 767px) {
   #banner .auxi {
-    position:relative;
+    position: relative;
     max-width: 100%;
     padding: 23px 30px 0;
   }
@@ -488,13 +488,13 @@
     object-position: 84% 20%;
   }
 }
-@media(max-width:1285px) {
+@media (max-width: 1285px) {
   #banner .cont-btn {
     /* display: flex; */
     flex-direction: row;
   }
 }
-@media(max-width:990px) {
+@media (max-width: 990px) {
   #banner .cont-btn {
     /* display: flex; */
     flex-direction: column;
@@ -651,9 +651,8 @@
       rgba(22, 22, 22, 1) 42%
     );
   }
-
-}/* Media  */
-@media(max-width:767px) {
+} /* Media  */
+@media (max-width: 767px) {
   #banner .hero__pref {
     margin-bottom: 0;
   }
