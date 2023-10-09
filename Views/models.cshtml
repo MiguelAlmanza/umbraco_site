@@ -8,7 +8,15 @@
 	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/banner.css">
 	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/d_exterior.css">
 	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/d_interior.css">
+	<link rel="preload" as="style" onload="this.rel='stylesheet'" href="/css/modelos/galeria1.css">
+}
+@section scripts{
+	@* library *@
+	<script src='/js/libraries/swiper.min.js' defer></script>
+	<script src='/js/galeria1.js' defer></script>
+
 }
 @await Html.PartialAsync("modelos/banner")
 @await Html.PartialAsync("modelos/d_exterior")
 @await Html.PartialAsync("modelos/d_interior")
+@await Html.PartialAsync("modelos/galeria1")

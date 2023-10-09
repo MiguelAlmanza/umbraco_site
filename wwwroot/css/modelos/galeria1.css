@@ -1,0 +1,400 @@
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.block-tabs {
+    padding: 48px 0;
+}
+
+#parte5 {
+    padding: 0;
+    margin-bottom: 64px;
+    background: rgba(242,242,242,0.4);
+    /*opacity: 0.4;*/
+}
+#parte5 .container_parte5 {
+    position: relative;
+}
+#parte5 .mobile {
+    display: none;
+}
+#parte5 .swiper-button-prev {
+     position: absolute;
+    background-image: url('../../../../imag/v1/icon/portadas/pasajeros/icon_arrow_left_black.svg');
+    background-repeat: no-repeat;
+    background-color: #F2F2F2;
+    background-size: 17.61px;
+    left: 0;
+    top: calc(41%);
+    width: 55px;
+    height: 100px;
+    outline: none;
+    margin-top: 0;
+    z-index: 10;
+    }
+#parte5 .swiper-button-next {
+    position: absolute;
+    background-image: url('../../../../imag/v1/icon/portadas/pasajeros/icon_arrow_right_black.svg') ;
+    background-repeat: no-repeat ;
+    background-color: #FFFFFF;
+    background-size: 17.61px ;
+    right: 0;
+    top: calc(41%);
+    width: 55px ;
+    height: 100px ;
+    outline: none ;
+    margin-top: 0 ;
+    z-index: 10;
+}
+#parte5 .button2 {
+    display: none;
+}
+#parte5 .auxi {
+    max-width: 1872px; /*ancho máximo que ocupa la imagen.*/
+    z-index: 10;
+}
+#parte5 .auxi .carousel {
+    position: relative;
+    
+}
+#parte5 .carousel .swiper-container,
+#parte5 .swiper-container .swiper-wrapper,
+#parte5 .swiper-wrapper .swiper-slide {
+    position: relative;
+    max-height: 670px; /*alto máximo que ocupa la imagen*/
+}
+#parte5 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+#parte5 .block-tabs {
+    padding: 0;
+    z-index: 10;
+}
+#parte5 .block-tabs .tab-bar {
+    padding: 0;
+}
+#parte5 .auxi .cont-tit {
+    padding: 45px 0 24px 0;
+    margin-bottom: 0;
+}
+#parte5 .cont-tit .epig{
+    font-family: 'MBCorpoSTextRegular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #666666;
+}
+#parte5 .block-tabs .cont-tit {
+    margin-bottom: 0;
+}
+#parte5 .cont-tit .tit {
+    font-family: 'MBCorpoSTextRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    max-width: 1551px;
+    margin: 0 auto;
+}
+#parte5 .cont-tabs::-webkit-scrollbar {
+    display: none;
+}
+#parte5 .tab-bar .cont-tabs {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    /*padding: 0 17.21px 0 25.55px;*/
+    background-color: rgba(255, 255, 255, 0.81);
+    overflow: overlay;
+    scroll-behavior: smooth;
+    z-index: 2;
+}
+#parte5 .tab-bar .cont-tabs .tablink {
+    font-family: "MBCorpoSTextRegular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex: 0 0 auto;
+    color: #000000;
+    padding: 0 18px;
+}
+#parte5 .tab-bar .cont-tabs .tablink.active {
+    font-family: 'MBCorpoSTextRegular', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    flex: 0 0 auto;
+    color: #000000;
+    border-bottom: 4px solid #000000;
+    
+}
+#parte5 .block-tabs .carousel-item {
+    padding: 0;
+    margin: 0 19px 0 18px;
+}
+#parte5 .carousel-item .cont-tit {
+    padding: 26.62px 0 86.5px 15px;
+    margin: 0;
+}
+#parte5 .block-tabs .carousel-item {
+    display: none;
+}
+#parte5 .block-tabs .carousel-item.active {
+    display: block;
+}
+
+/* MEDIA QUERIES */
+/*@media (min-width: 651px) and (max-width: 990px) {*/
+/*    #parte5 {*/
+/*        padding: 0;*/
+/*        margin-bottom: 8px;*/
+/*        background: rgba(242,242,242,0.4);*/
+        /*opacity: 0.4;*/
+/*    }*/
+/*    #parte5 .swiper-button-prev, */
+/*    #parte5 .swiper-button-next {*/
+/*        display: none;*/
+/*    }*/
+/*    #parte5 .auxi .carousel {*/
+/*        height: auto;*/
+/*    }*/
+/*    #parte5 .carousel .swiper-container,*/
+/*    #parte5 .swiper-container .swiper-wrapper,*/
+/*    #parte5 .swiper-wrapper .swiper-slide {*/
+/*        height: 100%;*/
+/*    }*/
+/*    #parte5 .swiper-slide img{*/
+/*        width: 100%;*/
+/*        height: 100%;*/
+/*    }*/
+/*    #parte5 .auxi .cont-tit {*/
+/*        padding: 29.21px 0 20.35px 0;*/
+/*        margin: 0;*/
+/*    }*/
+/*    #parte5 .block-tabs {*/
+/*        padding: 0;*/
+/*    }*/
+/*    #parte5 .block-tabs .tab-bar {*/
+/*        padding: 0;*/
+/*    }*/
+/*    #parte5 .block-tabs .cont-tit {*/
+/*        margin-bottom: 0;*/
+/*    }*/
+/*    #parte5 .cont-tit .epig{*/
+/*        color: #262626;*/
+/*        font-family: 'MontserratRegular';*/
+/*        font-size: 15px;*/
+/*        font-weight: 400;*/
+/*        line-height: 15px;*/
+/*        letter-spacing: 0.2em;*/
+/*        text-align: center;*/
+/*    }*/
+/*    #parte5 .cont-tit .tit {*/
+/*        color: #262626;*/
+/*        font-family: 'MontserratRegular';*/
+/*        font-size: 16px;*/
+/*        font-weight: 400;*/
+/*        line-height: 20px;*/
+/*        text-align: left;*/
+/*        margin: 0 auto;*/
+/*    }*/
+/*    #parte5 .tab-bar .cont-tabs {*/
+/*        display: flex;*/
+/*        justify-content: space-between;*/
+        /*justify-content: flex-start;*/
+/*        position: relative;*/
+/*        width: auto;*/
+/*        height: 41px;*/
+/*        bottom: 44px;*/
+/*        padding: 0 17.21px 0 25.55px;*/
+/*        background-color: rgba(255, 255, 255, 0.81);*/
+/*        overflow: overlay;*/
+/*    }*/
+/*    #parte5 .block-tabs .tab-bar .cont-tabs .tablink {*/
+/*        color: #232323  ;*/
+/*        font-family: "MontserratRegular";*/
+/*        font-size: 13px;*/
+/*        font-weight: 400;*/
+/*        line-height: 16px;*/
+/*        flex: 0 0 auto;*/
+/*        text-align: left;*/
+/*        margin: 0;*/
+/*    }*/
+   
+/*    #parte5 .block-tabs .tab-bar .cont-tabs .tablink.active {*/
+/*        color: #262626;*/
+/*        font-family: "MontserratBold";*/
+/*        font-size: 13px;*/
+/*        font-weight: 400;*/
+/*        line-height: 16px;*/
+/*        flex: 0 0 auto;*/
+/*        text-align: left;*/
+/*        margin: 0;*/
+/*        border-color: #B7131B;*/
+/*        border-bottom: 4px solid #B7131B;*/
+/*    }*/
+/*    #parte5 .block-tabs .carousel-item {*/
+/*        padding: 0;*/
+/*        margin: 0 19px 0 18px;*/
+/*    }*/
+/*    #parte5 .carousel-item .cont-tit {*/
+/*        padding: 36px 0 79px 0;*/
+/*        margin: 0;*/
+/*    }*/
+/*}*/
+@media (max-width: 840px) {
+    #parte5 .swiper-button-prev,
+    #parte5 .swiper-button-next {
+        width: 36px ;
+        height: 60px ;
+        background-size: 12.14px;
+        top: calc(31%);
+    }
+}
+@media (max-width: 650px) {
+    #parte5 {
+        padding: 0;
+        margin-bottom: 24px;
+        background: rgba(242,242,242,0.4);
+        /*opacity: 0.4;*/
+    }
+    #parte5 .desktop {
+        display: none;
+    }
+    #parte5 .mobile {
+        display: block;
+    }
+    #parte5 .swiper-button-prev,
+    #parte5 .swiper-button-next {
+        width: 36px ;
+        height: 60px ;
+        background-size: 12.14px;
+    }
+    #parte5 .auxi .carousel {
+        height: auto;
+    }
+    #parte5 .carousel .swiper-container,
+    #parte5 .swiper-container .swiper-wrapper,
+    #parte5 .swiper-wrapper .swiper-slide {
+        height: 100%;
+        max-height: 260px;
+    }
+    
+    #parte5 .swiper-slide img{
+        width: 100%;
+        height: 100%;
+    }
+    #parte5 .auxi .cont-tit {
+        padding: 16.1px 0 10.79px 0;
+        margin: 0;
+    }
+    #parte5 .cont-tit .epig{
+        font-family: 'MBCorpoSTextRegular';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #666666;
+    }
+    #parte5 .block-tabs {
+        padding: 0;
+    }
+    #parte5 .block-tabs .tab-bar {
+        padding: 0;
+    }
+    #parte5 .tab-bar .cont-tabs {
+        height: 45px;
+        bottom: 0px;
+        gap: 11px
+    }
+    #parte5 .block-tabs .cont-tit {
+        margin-bottom: 0;
+    }
+    #parte5 .block-tabs .cont-tit .tit {
+        font-family: 'MBCorpoSTextRegular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #232323;
+        padding: 0 23px;
+    }
+    #parte5 .block-tabs .tab-bar .cont-tabs {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        width: auto;
+        min-height: 0;
+        max-height: 57px ;
+        bottom: 56px;
+        margin-bottom: -56px;
+        padding: 0 20px 0 0;
+        background-color: rgba(255, 255, 255, 0.74);
+        overflow: overlay;
+        gap: 21.09px
+    }
+    #parte5 .tab-bar .cont-tabs .tablink {
+        font-family: "MBCorpoSTextRegular";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        color: #000000;
+        flex: 0 0 auto;
+        text-align: left;
+        max-width: 140px;
+        padding: 0 4px;
+        box-sizing: content-box;
+    }
+    #parte5 .cont-tabs .tablink1 {
+        width: 15px;
+        padding-left: 10px;
+        margin-left: 0;
+    }
+    #parte5 .tab-bar .cont-tabs .tablink.active{
+        font-family: "MBCorpoSTextRegular";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 13px;
+        color: #000000;
+        flex: 0 0 auto;
+        border-bottom: 4px solid #000000;
+    }
+    
+    #parte5 .block-tabs .carousel-item {
+        padding: 0;
+        margin: 0 auto;
+    }
+    #parte5 .carousel-item .cont-tit {
+        padding: 20px 0 52px 0;
+        margin: 0;
+    }
+}
+/*@media (max-width: 320px) {*/
+/* #parte5 .carousel-item .cont-tit{*/
+/*     padding: 0px;*/
+/*     margin-top: 42px;*/
+/*     margin-bottom: 42px;*/
+/* }*/
+/*}*/
