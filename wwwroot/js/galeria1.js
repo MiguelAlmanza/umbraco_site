@@ -19,7 +19,7 @@ var swiper1 = new Swiper('.swiper-1', {
     },
 });
 
-if($(".carousel-tabs-swiper").length > 0){
+if(document.querySelectorAll(".carousel-tabs-swiper").length > 0){
     let uniqueElement = (array, element, class_name) => {
         array.each(function(index, currentValue) {
             $(this).removeClass(class_name);

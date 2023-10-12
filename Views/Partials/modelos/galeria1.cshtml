@@ -10,71 +10,9 @@
                 {
                     <p class="epig">@Model.Value("G1title")</p>
                 }
-                        @Html.GetBlockListHtml(Model, "G1swiper","sliderGaleria1copy")       
-            </div>
-            <div class="carousel carousel-tabs-swiper">
-                <!-- slider -->
-                <div class="swiper-container swiper-1">
-                    <div class="swiper-wrapper">
-                        
-                        @Html.GetBlockListHtml(Model, "G1swiper")       
-                        %%if(fotofija_1872_670_##i##)%%%%if(texto1_dato##i##_tecnologia)%%
-                        <!-- slide -->
-                        <div class="swiper-slide">
-                            <img src="%%fotofija_1872_670_##i##%%" class="desktop"
-                                alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
-                            <img src="%%if(fotofija_640_500_##i##)%%%%fotofija_640_500_##i##%%%%/if%%%%nif(fotofija_640_500_##i##)%%%%fotofija_320_260_##i##%%%%/nif%%"
-                                class="mobile" alt="%%texto1_dato##i##_tecnologia%%">
-                        </div>
-                        %%/if%%%%/if%%
-                        
-                    </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper1-pagination hide"></div>
-                    <!--Buttons PREV & NEXT-->
-                    <div class="swiper-button-next button1 swiper-button-next1"></div>
-                    <div class="swiper-button-prev button1 swiper-button-prev1"></div>
-                    <div class="tab-bar">
-                        <nav class="cont-tabs">
-                            <!--#set var="ACTIVE" value="active" -->
-                            %%_loop_artic(1,5)%%
-                            %%if(texto1_dato##i##_tecnologia)%%
-                            %%if(fotofija_1872_670_##i##)%%
-                            <button class="tablink slideChange-tab <!--#echo var=" ACTIVE"
-                                -->">%%texto1_dato##i##_tecnologia%%</button>
-                            <!--#if expr='v("ACTIVE") =~ /active/' -->
-                            <!--#set var="ACTIVE" value="" -->
-                            <!--#endif -->
-                            %%/if%%%%/if%%
-                            %%/_loop_artic%%
-
-                         
-                        </nav>
-                    </div>
-                    <div class="separa"></div>
-                </div>
-            </div>
-        </div>
-        <section class="block-tabs">
-            <div class="tabs">
-                <div class="auxi">
-                    <!--#set var="ACTIVE" value="active" -->
-                    %%_loop_artic(1,5)%%
-                    %%if(texto1_dato##i##_tecnologia)%%%%if(fotofija_1872_670_##i##)%%
-                    <div class="carousel-item slideChange-item <!--#echo var=" ACTIVE" -->">
-                        <div class="cont-tit">
-                            %%if(texto2_dato##i##_tecnologia)%%<h2 class="tit">%%texto2_dato##i##_tecnologia%%</h2>
-                            %%/if%%
-                        </div>
-                    </div>
-                    <!--#if expr='v("ACTIVE") =~ /active/' -->
-                    <!--#set var="ACTIVE" value="" -->
-                    <!--#endif -->
-                    %%/if%%%%/if%%
-                    %%/_loop_artic%%
-                </div>
-            </div>
-        </section>
+            </div>                 
+            @Html.GetBlockListHtml(Model, "G1swiper","galeria1/sliderGaleria1copy")       
+            
         
 
     </div>

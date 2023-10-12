@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "C#: suzuki.site",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\suzuki.site.csproj",
+            "launchConfigurationId": "TargetFramework=;Umbraco.Web.UI"
+        }
+    ]
+}
