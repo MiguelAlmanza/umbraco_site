@@ -4,84 +4,92 @@
     if (Model?.Any() != true) { return; }
 }
 
-    <div class="carousel carousel-tabs-swiper">
-        <!-- slider -->
-        <div class="swiper-container swiper-1">
-            <div class="swiper-wrapper">
-                
-                @foreach (var block in Model)
+<div class="carousel carousel-tabs-swiper">
+    <!-- slider -->
+    <div class="swiper-container swiper-1">
+        <div class="swiper-wrapper">
+
+            @foreach (var block in Model)
+            {
+                if (block.Settings.Value<String>("hide") == "False")
                 {
-
-                    if(block.Settings.Value<String>("hide")=="False"){
-                        var image = block.Content.Value<MediaWithCrops>("image");
-                        var paragraph = block.Content.Value<string>("paragraph");
-                        var title = block.Content.Value<string>("title");
-                        if(image != null && !string.IsNullOrEmpty(title)&&!string.IsNullOrEmpty(paragraph)){
-                            <!-- slide -->
-                            <div class="swiper-slide">
-                                <img src="@image.MediaUrl()" class="desktop"
-                                    alt="@image.Name">
-                                <img src="@image.MediaUrl()"
-                                    class="mobile" alt="@image.Name">
-                            </div>
-
-                        }
-
+                    var image = block.Content.Value<MediaWithCrops>("image");
+                    var paragraph = block.Content.Value<string>("paragraph");
+                    var title = block.Content.Value<string>("title");
+                    if (image != null && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(paragraph))
+                    {
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="@image.MediaUrl()" class="desktop" alt="@image.Name">
+                            <img src="@image.MediaUrl()" class="mobile" alt="@image.Name">
+                        </div>
                     }
-
                 }
-
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper1-pagination hide"></div>
-            <!--Buttons PREV & NEXT-->
-            <div class="swiper-button-next button1 swiper-button-next1"></div>
-            <div class="swiper-button-prev button1 swiper-button-prev1"></div>
-            <div class="tab-bar">
-                <nav class="cont-tabs">
-                    <!--#set var="ACTIVE" value="active" -->
-                    @foreach (var block in Model)
-                    {   
-                        if(block.Settings.Value<String>("hide")=="False"){
+            }
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper1-pagination hide"></div>
+        <!--Buttons PREV & NEXT-->
+        <div class="swiper-button-next button1 swiper-button-next1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="28" viewBox="0 0 18 28" fill="none">
+                <path d="M3.73482 -5.65594e-07L0.500001 3.29L11.0074 14L0.500004 24.71L3.73482 28L17.5 14L3.73482 -5.65594e-07Z" fill="black"/>
+            </svg>
+        </div>
+        <div class="swiper-button-prev button1 swiper-button-prev1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="28" viewBox="0 0 17 28" fill="none">
+                <path d="M13.7652 28L17 24.71L6.49258 14L17 3.29L13.7652 2.82797e-07L-3.13127e-06 14L13.7652 28Z" fill="black"/>
+            </svg>
+        </div>
+        <div class="tab-bar">
+            <nav class="cont-tabs">
+                @{
+                    var index = 0;
+                    foreach (var block in Model)
+                    {
+                        if (block.Settings.Value<String>("hide") == "False")
+                        {
                             var image = block.Content.Value<MediaWithCrops>("image");
                             var paragraph = block.Content.Value<string>("paragraph");
                             var title = block.Content.Value<string>("title");
-                            if(image != null && !string.IsNullOrEmpty(title)&&!string.IsNullOrEmpty(paragraph)){
-                                <button class="tablink slideChange-tab <!--#echo var=' ACTIVE'-->">
+                            if (image != null && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(paragraph))
+                            {
+                                <button class="tablink slideChange-tab @(index == 0 ? "active" : null)">
                                     @title
                                 </button>
-                                <!--#if expr='v("ACTIVE") =~ /active/' -->
-                                <!--#set var="ACTIVE" value="" -->
-                                <!--#endif -->
+                            index++;
                             }
                         }
                     }
+                }
 
-                </nav>
-            </div>
+            </nav>
         </div>
     </div>
+</div>
 </div>
 <section class="block-tabs">
     <div class="tabs">
         <div class="auxi">
-            <!--#set var="ACTIVE" value="active" -->
-            @foreach (var block in Model)
-            {   
-                if(block.Settings.Value<String>("hide")=="False"){
-                    var image = block.Content.Value<MediaWithCrops>("image");
-                    var paragraph = block.Content.Value<string>("paragraph");
-                    var title = block.Content.Value<string>("title");
-                    if(image != null && !string.IsNullOrEmpty(title)&&!string.IsNullOrEmpty(paragraph)){
-            <div class="carousel-item slideChange-item <!--#echo var=' ACTIVE' -->">
-                <div class="cont-tit">
-                    <h2 class="tit">@paragraph</h2>
-                    
-                </div>
-            </div>
-            <!--#if expr='v("ACTIVE") =~ /active/' -->
-            <!--#set var="ACTIVE" value="" -->
-            <!--#endif -->
+            
+            @{
+                index = 0;
+                foreach (var block in Model)
+                {
+                    if (block.Settings.Value<String>("hide") == "False")
+                    {
+                        var image = block.Content.Value<MediaWithCrops>("image");
+                        var paragraph = block.Content.Value<string>("paragraph");
+                        var title = block.Content.Value<string>("title");
+                        if (image != null && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(paragraph))
+                        {
+                            <div class="carousel-item slideChange-item @(index == 0 ? "active" : null)">
+                                <div class="cont-tit">
+                                    <h2 class="tit">@paragraph</h2>
+                                    
+                                </div>
+                            </div>
+                            index++;
+                        }
                     }
                 }
             }

@@ -19,8 +19,13 @@ button {
 #parte5 .mobile {
     display: none;
 }
+#parte5 .swiper-button-prev,
+#parte5 .swiper-button-next { 
+    display: grid;
+    place-items: center;
+}
 #parte5 .swiper-button-prev {
-     position: absolute;
+    position: absolute;
     background-image: url('../../../../imag/v1/icon/portadas/pasajeros/icon_arrow_left_black.svg');
     background-repeat: no-repeat;
     background-color: #F2F2F2;
@@ -158,106 +163,10 @@ button {
 #parte5 .block-tabs .carousel-item.active {
     display: block;
 }
+#parte5 .swiper-container-horizontal>.swiper-pagination-bullets {
+    display: none;
+}
 
-/* MEDIA QUERIES */
-/*@media (min-width: 651px) and (max-width: 990px) {*/
-/*    #parte5 {*/
-/*        padding: 0;*/
-/*        margin-bottom: 8px;*/
-/*        background: rgba(242,242,242,0.4);*/
-        /*opacity: 0.4;*/
-/*    }*/
-/*    #parte5 .swiper-button-prev, */
-/*    #parte5 .swiper-button-next {*/
-/*        display: none;*/
-/*    }*/
-/*    #parte5 .auxi .carousel {*/
-/*        height: auto;*/
-/*    }*/
-/*    #parte5 .carousel .swiper-container,*/
-/*    #parte5 .swiper-container .swiper-wrapper,*/
-/*    #parte5 .swiper-wrapper .swiper-slide {*/
-/*        height: 100%;*/
-/*    }*/
-/*    #parte5 .swiper-slide img{*/
-/*        width: 100%;*/
-/*        height: 100%;*/
-/*    }*/
-/*    #parte5 .auxi .cont-tit {*/
-/*        padding: 29.21px 0 20.35px 0;*/
-/*        margin: 0;*/
-/*    }*/
-/*    #parte5 .block-tabs {*/
-/*        padding: 0;*/
-/*    }*/
-/*    #parte5 .block-tabs .tab-bar {*/
-/*        padding: 0;*/
-/*    }*/
-/*    #parte5 .block-tabs .cont-tit {*/
-/*        margin-bottom: 0;*/
-/*    }*/
-/*    #parte5 .cont-tit .epig{*/
-/*        color: #262626;*/
-/*        font-family: 'MontserratRegular';*/
-/*        font-size: 15px;*/
-/*        font-weight: 400;*/
-/*        line-height: 15px;*/
-/*        letter-spacing: 0.2em;*/
-/*        text-align: center;*/
-/*    }*/
-/*    #parte5 .cont-tit .tit {*/
-/*        color: #262626;*/
-/*        font-family: 'MontserratRegular';*/
-/*        font-size: 16px;*/
-/*        font-weight: 400;*/
-/*        line-height: 20px;*/
-/*        text-align: left;*/
-/*        margin: 0 auto;*/
-/*    }*/
-/*    #parte5 .tab-bar .cont-tabs {*/
-/*        display: flex;*/
-/*        justify-content: space-between;*/
-        /*justify-content: flex-start;*/
-/*        position: relative;*/
-/*        width: auto;*/
-/*        height: 41px;*/
-/*        bottom: 44px;*/
-/*        padding: 0 17.21px 0 25.55px;*/
-/*        background-color: rgba(255, 255, 255, 0.81);*/
-/*        overflow: overlay;*/
-/*    }*/
-/*    #parte5 .block-tabs .tab-bar .cont-tabs .tablink {*/
-/*        color: #232323  ;*/
-/*        font-family: "MontserratRegular";*/
-/*        font-size: 13px;*/
-/*        font-weight: 400;*/
-/*        line-height: 16px;*/
-/*        flex: 0 0 auto;*/
-/*        text-align: left;*/
-/*        margin: 0;*/
-/*    }*/
-   
-/*    #parte5 .block-tabs .tab-bar .cont-tabs .tablink.active {*/
-/*        color: #262626;*/
-/*        font-family: "MontserratBold";*/
-/*        font-size: 13px;*/
-/*        font-weight: 400;*/
-/*        line-height: 16px;*/
-/*        flex: 0 0 auto;*/
-/*        text-align: left;*/
-/*        margin: 0;*/
-/*        border-color: #B7131B;*/
-/*        border-bottom: 4px solid #B7131B;*/
-/*    }*/
-/*    #parte5 .block-tabs .carousel-item {*/
-/*        padding: 0;*/
-/*        margin: 0 19px 0 18px;*/
-/*    }*/
-/*    #parte5 .carousel-item .cont-tit {*/
-/*        padding: 36px 0 79px 0;*/
-/*        margin: 0;*/
-/*    }*/
-/*}*/
 @media (max-width: 840px) {
     #parte5 .swiper-button-prev,
     #parte5 .swiper-button-next {
