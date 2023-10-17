@@ -1,0 +1,18 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+@{
+    var items = Model.Value<IEnumerable<IPublishedElement>>("g2swiper");
+    if (items != null) {
+        foreach (var item in items)
+        {
+            var description = item.Value<string>("paragraph");
+            var image = item.Value<IPublishedContent>("image");
+
+            if (!string.IsNullOrEmpty(description))
+            {
+                <p>@description</p>
+            }
+        }
+    }
+    
+}

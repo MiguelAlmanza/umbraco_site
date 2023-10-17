@@ -1,15 +1,29 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.Blocks
 
-<section id="parte5" class="tabs-carousel bg-gris">
-    <div class="link"></div>
-    <div class="container_parte5">
-        <div class="auxi">
-            <div class="cont-tit">
-                @if (Model.Value("G1title") != null && !string.IsNullOrEmpty(Model.Value<string>("G1title")))
+@{
+    var blocks = Model.Value<BlockListModel>("G1swiper");
+    if (blocks!=null){
+        @foreach (var block in blocks)
+            {
+                if (block.Settings.Value<String>("hide") == "False")
                 {
-                    <p class="epig">@Model.Value("G1title")</p>
+                    var title = @block.Content.Value("title");
+                    <h2>@title;</h2>
                 }
-            </div>                 
-            @Html.GetBlockListHtml(Model, "G1swiper","galeria1/sliderGaleria1copy")       
-    </div>
-</section>
+            }
+        <section id="parte5" class="tabs-carousel bg-gris">
+            <div class="link"></div>
+            <div class="container_parte5">
+                <div class="auxi">
+                    <div class="cont-tit">
+                        @if (Model.Value("G1title") != null && !string.IsNullOrEmpty(Model.Value<string>("G1title")))
+                        {
+                            <p class="epig">@Model.Value("G1title")</p>
+                        }
+                    </div>                 
+                    @Html.GetBlockListHtml(Model, "G1swiper","galeria1/sliderGaleria1copy")       
+            </div>
+        </section>
+    }
+}
