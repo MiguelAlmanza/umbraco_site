@@ -1,0 +1,256 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+
+@{
+    string sectionTitle = Model.Value<string>("G3Title")?? "";
+    var tab1Images = Model.Value<IEnumerable<MediaWithCrops>>("G3tab1Images");
+    var tab2Images = Model.Value<IEnumerable<MediaWithCrops>>("G3tab2Images");
+    string tab1Title = Model.Value<string>("G3tab1Title")?? "";
+    string tab2Title = Model.Value<string>("G3tab2Title")?? "";
+    bool addTodos = Model.Value<bool>("G3todos");
+
+    tab1Title = changeText(tab1Title,"Pestaña 1");
+    tab2Title = changeText(tab2Title,"Pestaña 2");
+    
+    static string changeText(string text, string defaultText){
+        if(string.IsNullOrEmpty(text)){
+            text = defaultText;
+        }
+        return text;
+    }
+
+
+    if(tab1Images!=null && tab2Images!=null){
+        <section id="parte7" class="carousel-full carousel-center bg-gris">
+            <div class="link"></div>
+            <div class="cont-tit">
+                @if(!string.IsNullOrEmpty(sectionTitle)){
+                    <p class="epig">%%titulo_galeria3%%</p>
+                }
+                <div class="tab-buttons">
+                    
+                    @if(addTodos){
+                    <a href="javascript:void(0)" data-tab="tab0" class="b-nav-tab active">TODO</a>
+                    }
+                    <a href="javascript:void(0)" data-tab="tab1" class="b-nav-tab @(addTodos ==true ? "":"active")">
+                        @tab1Title
+                    </a>
+                    <a href="javascript:void(0)" data-tab="tab2" class="b-nav-tab">
+                        @tab2Title
+                    </a>
+                </div>
+            </div>
+            <!--#set var="ACTIVE" value="active" -->
+            %%if(chk_comp6_todo)%%
+            <!--#set var="ACTIVE" value="" -->
+            <div id="tab0" class="b-tab active">
+                <!-- slider -->
+                <div class="swiper-container swiper-auto">
+                    <div class="swiper-wrapper">
+                        %%_loop_artic(1,3)%%
+                        %%if(fotofija_1690_630_1_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_1_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_1_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_1_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_1_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_1_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_2_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_2_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_2_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_2_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_2_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_2_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_3_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_3_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_3_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_3_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_3_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_3_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_4_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_4_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_4_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_4_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_4_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_4_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_5_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_5_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_5_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_5_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_5_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_5_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%/_loop_artic%%
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-next-auto"></div>
+                    <div class="swiper-button-prev swiper-button-prev-auto"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination-auto"></div>
+                    <div class="separa"></div>
+                </div>
+            </div>
+            %%/if%%
+            %%_loop_artic(1,3)%%
+            %%if(tab##i##_galeria3)%%
+            <div id="tab##i##" class="b-tab <!--#echo var=" ACTIVE" -->">
+                <!-- slider -->
+                <div class="swiper-container swiper-auto">
+                    <div class="swiper-wrapper">
+                        %%if(fotofija_1690_630_1_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_1_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_1_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_1_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_1_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_1_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_2_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_2_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_2_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_2_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_2_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_2_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_3_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_3_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_3_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_3_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_3_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_3_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_4_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_4_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_4_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_4_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_4_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_4_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                        %%if(fotofija_1690_630_5_##i##)%%
+                        <!-- slide -->
+                        <div class="swiper-slide box-hero">
+                            <div class="img-wrap">
+                                <img class="desktop" src="%%fotofija_1690_630_5_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%if(fotofija_640_560_5_##i##)%%
+                                <img class="mobile" src="%%fotofija_640_560_5_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/if%%
+                                %%nif(fotofija_640_560_5_##i##)%%
+                                <img class="mobile" src="%%fotofija_320_280_5_##i##%%"
+                                    alt="%%if(txt_alt_fotos)%%%%txt_alt_fotos%%%%/if%%%%nif(txt_alt_fotos)%%%%_titular%%%%/nif%%">
+                                %%/nif%%
+                            </div>
+                        </div>
+                        %%/if%%
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-next-auto"></div>
+                    <div class="swiper-button-prev swiper-button-prev-auto"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination-auto"></div>
+                    <div class="separa"></div>
+                </div>
+
+            </div>
+            <!--#if expr='v("ACTIVE") =~ /active/' -->
+            <!--#set var="ACTIVE" value="" -->
+            <!--#endif -->
+            %%/if%%
+            %%/_loop_artic%%
+        </section>
+
+    }
+}
