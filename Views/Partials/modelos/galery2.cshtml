@@ -3,16 +3,69 @@
 @{
     var items = Model.Value<IEnumerable<IPublishedElement>>("g2swiper");
     if (items != null) {
-        foreach (var item in items)
-        {
-            var description = item.Value<string>("paragraph");
-            var image = item.Value<IPublishedContent>("image");
+        
+        <section id="parte6" class="carousel-full carousel-full-center">
+            <div class="link"></div>
+            <!-- slider -->
+                <div class="container_parte6">
+                    <div class="swiper-container swiper-2">
+                        <div class="swiper-wrapper">
+                        @{
+                            foreach (var item in items)
+                            {
+                                var title = item.Value<string>("title");
+                                var paragraph = item.Value<string>("paragraph");
+                                var image = item.Value<IPublishedContent>("image");
 
-            if (!string.IsNullOrEmpty(description))
-            {
-                <p>@description</p>
-            }
-        }
+                                if (image!=null){
+                                <!-- slide -->
+                                    <div class="swiper-slide box-hero">
+                                        <div class="container_tit">
+                                            <div class="cont-tit">
+                                                <div class="pagination_2">
+                                                    <!-- Add Pagination -->
+                                                    <div class="swiper-pagination-2"></div>
+                                                </div>
+                                                @if(!string.IsNullOrEmpty(Model.Value<string>("G2SectionTitle"))){
+                                                <p class="epig">@Model.Value("G2SectionTitle")</p>
+                                                }
+                                                @if(!string.IsNullOrEmpty(title)){
+                                                <h2 class="tit">@title</h2>
+                                                }
+                                                @if(!string.IsNullOrEmpty(paragraph)){
+                                                <p class="baj">@paragraph</p>
+                                                }
+                                                <div class="pagination_1">
+                                                    <!-- Add Pagination -->
+                                                    <div class="swiper-pagination-2"></div>
+                                                    <!-- Add Arrows -->
+                                                    <button class="swiper-button-prev swiper-button-prev-2 button_1"></button>
+                                                    <button class="swiper-button-next swiper-button-next-2 button_1"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="img-wrap">
+                                            <img class="desktop" src="@image.MediaUrl()" alt="@image.Name">                               
+                                            <img class="mobile" src="@image.MediaUrl()" alt="@image.Name">                               
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }    
+                        </div>
+                        <div class="pagination_mobile">
+                            <!-- Add Pagination -->
+                            <!--<div class="swiper-pagination-2"></div>-->
+                            <!-- Add Arrows -->
+                            <button class="swiper-button-prev swiper-button-prev-2 button_1"></button>
+                            <button class="swiper-button-next swiper-button-next-2 button_1"></button>
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+            
+        </section>
     }
     
 }

@@ -1,0 +1,521 @@
+#parte6 {
+    padding-bottom: 0;
+    margin-bottom: 39px;
+}
+#parte6 .container_p6 {
+    position: relative;
+}
+#parte6 .mobile {
+    display: none;
+}
+#parte6 .block-tabs {
+    padding: 0;
+    border-bottom: none;
+    max-width: 90%;
+    margin: 0 auto;
+}
+#parte6 .swiper-container {
+    max-width: 1760px;
+    margin-left: 8.3%;
+    overflow: visible;
+}
+#parte6 .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+}
+#parte6 .swiper-slide .container_tit {
+    width: 100%;
+    background-color: #F4F4F4;
+    position: relative;
+}
+#parte6 .swiper-slide .container_texto {
+    position: relative;
+}
+#parte6 .swiper-slide .cont-tit {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1766px;
+    position: absolute;
+    left: calc(8.8%);
+    top: calc(26.5%);
+    max-width: 788px;
+    font-size: 16px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+#parte6 .cont-tit .epig {
+    color: #666666;
+    font-family: 'MBCorpoSTextRegular';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+#parte6 .cont-tit .tit {
+    color: #000000;
+    font-family: 'MBCorpoAScreen1Cond';
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 51px;
+    text-align: left;
+}
+#parte6 .cont-tit .baj {
+    color: #000000;
+    font-family: 'MBCorpoSTextRegular';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 76%;
+    text-align: left;
+    margin-bottom: 2.8vw;
+}
+#parte6 .cont-tit .pagination_1 {
+    display: flex;
+    gap: 29px;
+}
+#parte6 .swiper-slide .img-wrap {
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+    flex: 0 0 55.227272%; /*esto valor es el espacio que ocupa la imagen con respecto a 1760px(tamaño de imagen + cont-tit)*/
+}
+#parte6 .swiper-slide .img-wrap .desktop {
+    width: 100%;
+    height: 100%;
+}
+#parte6 .swiper-pagination-bullets {
+    bottom: 153px;
+    position: absolute;
+    left: 60px;
+    z-index: 2;
+}
+#parte6 .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #C51A20;
+    background: none;
+    opacity: 1;
+    margin: 0 9.5px;
+    box-sizing: border-box;
+}
+#parte6 .swiper-pagination-bullet-active {
+    background: #C51A20;
+}
+#parte6 .swiper-pagination-fraction {
+    /*left: 74px;*/
+    /*top: -211px;*/
+    margin-right: 6px;
+    /*position: relative;*/
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #666666;
+    width: auto;
+    z-index: 10;
+}
+#parte6 .swiper-button-prev {
+    position: initial;
+    background-image: url('/../mercedes/imag/v1/icon/portadas/pasajeros/icon_arrow_left_black.svg');
+    background-size: 15px;
+    /*top: calc(67%);*/
+    /*left: calc(9.55%);*/
+    width: 15px;
+    height: 23px;
+    outline: none;
+    margin-top: 0;
+    display: inline-block;
+}
+#parte6 .swiper-button-next {
+    position: initial;
+    background-image: url('/../mercedes/imag/v1/icon/portadas/pasajeros/icon_arrow_right_black.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    /*top: calc(67%);*/
+    /*right:calc(90%);*/
+    width: 15px;
+    height: 23px;
+    outline: none;
+    margin-top: 0;
+    display: inline-block;
+}
+#parte6 .swiper-container .pagination_mobile,
+#parte6 .swiper-slide .cont-tit .pagination_2{
+    display: none;
+}
+
+@media (max-width: 1800px) {
+    #parte6 .cont-tit .baj {
+        max-width: 90%;
+    }
+}
+@media (max-width: 1440px) {
+    #parte6 .swiper-slide .cont-tit {
+        top: calc(20%);
+    }
+}
+@media (max-width: 1366px) {
+    #parte6 .swiper-slide .cont-tit {
+        margin-bottom: 0;
+        /*padding: 100px 137px 0 62px;*/
+        max-width: 100%;
+    }
+    #parte6 .cont-tit .epig {
+        font-size: 16px;
+    }
+    #parte6 .cont-tit .tit {
+        font-size: 32px;
+        line-height: 41px;
+    }
+    #parte6 .cont-tit .baj {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #parte6 .swiper-button-prev,
+    #parte6 .swiper-button-next {
+        width: 10.5px;
+        height: 16px;
+        background-size: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    #parte6 .cont-tit .epig{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    #parte6 .cont-tit .tit {
+        font-size: 30px;
+        line-height: 31px;
+        max-width: 98%;
+    }
+    #parte6 .cont-tit .baj {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    #parte6 .cont-tit .baj {
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 870px) {
+    #parte6 .swiper-slide .cont-tit {
+        top: calc(8%);
+        left: calc(6%);
+        gap: 15px;
+    }
+}
+@media (max-width: 768px) {
+    #parte6 {
+        background-color: #F4F4F4;
+    }
+    #parte6 .swiper-container {
+        width: 85%;
+        margin: 0 auto;
+    }
+    #parte6 .swiper-slide .cont-tit {
+        position: initial;
+        padding: 12px 25px 40px 23px;
+    }
+    #parte6 .cont-tit .pagination {
+        display: none;
+    }
+    #parte6 .swiper-container .pagination_mobile {
+        display: block;
+    }
+    #parte6 .swiper-pagination-fraction {
+        text-align: center;
+    }
+    #parte6 .swiper-button-prev {
+        position: absolute;
+        background-image: url('/../mercedes/imag/v1/icon/portadas/pasajeros/leftwhite.png');
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.46);
+        background-size: 27px;
+        top: calc(50%);
+        left: calc(-10%);
+        border-radius: 82%;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        margin-top: 0;
+        display: inline-block;
+    }
+    #parte6 .swiper-button-next {
+        position: absolute;
+        background-image: url('/../mercedes/imag/v1/icon/portadas/pasajeros/rigthwhite.png');
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.46);
+        background-size: 27px;
+        top: calc(50%);
+        right: 68px;
+        border-radius: 82px;
+        width: 50px;
+        height: 49px;
+        outline: none;
+        margin-top: 0;
+        display: inline-block;
+    }
+    #parte6 .swiper-button-next,
+    #parte6 .swiper-button-prev {
+        top: 49%;
+        background-color: transparent;
+        background-size: 25.58px;
+        width: 20px;
+        height: 19.63px;
+    }
+    #parte6 .swiper-wrapper .swiper-slide {
+        flex-direction: column-reverse;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    #parte6 .cont-tit .epig {
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: #666666;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 12px;
+        margin-top: 5px;
+    }
+    #parte6 .cont-tit .tit  {
+        color: #232323;
+        font-family: 'MBCorpoAScreen1Cond';
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 14px;
+    }
+    #parte6 .cont-tit .baj {
+        color: #232323;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        max-width: 100%;
+    }
+    #parte6 .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        border: 1px solid #C51A20;
+        opacity: 1;
+        margin: 0 7px;
+    }
+    #parte6 .swiper-container .swiper-pagination-bullets {
+        display: none;
+    }
+    #parte6 .swiper-slide:not(.swiper-slide-active) .cont-tit {
+        background: none;
+        display: none;
+        padding: 0;
+    }
+    #parte6 .cont-tit .tit {
+        color: #232323;
+        font-family: 'MBCorpoAScreen1Cond';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-left: 0;
+        text-align: left;
+        margin-bottom: 12px;
+    }
+    #parte6 .swiper-slide .img-wrap {
+        width: 100%;
+    }
+    #parte6 .img-wrap img {
+        width: 100%;
+    }
+    #parte6 .swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(33%);
+        left: calc(-5%);
+        background-size: 8px;
+        width: 8px;
+        height: 16px;
+    }
+    #parte6 .swiper-button-next {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(33%);
+        right: calc(-5%);
+        background-size: 8px;
+        width: 8px;
+        height: 16px;
+    }
+}
+@media (max-width: 540px) {
+    #parte6 .swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(28%);
+        left: calc(-6%);
+        background-size: 8px;
+        width: 8px;
+        height: 16px;
+    }
+
+    #parte6 .swiper-button-next {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(28%);
+        right: calc(-6%);
+        background-size: 8px;
+        width: 8px;
+        height: 16px;
+    }
+}
+@media (max-width: 412px) {
+    #parte6 .swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(24%);
+        left: calc(-7%);
+        background-size: 8px;
+        width: 8px;
+        height: 16px;
+    }
+
+    #parte6 .swiper-button-next {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(24%);
+        right: calc(-7%);
+        background-size: 8px;
+        width: 8px;
+        height: 16px;
+    }
+}
+@media (max-width: 320px) {
+    #parte6 {
+        background-color: #F4F4F4;
+    }
+    #parte6 .cont-tit .pagination_1 {
+        display: none;
+    }
+    #parte6 .swiper-slide .cont-tit .pagination_2{
+        display: block;
+    }
+    #parte6 .swiper-button-next,
+    #parte6 .swiper-button-prev {
+        top: 49%;
+        background-color: transparent;
+        width: 20px;
+        height: 19.63px;
+    }
+
+    #parte6 .swiper-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #parte6 .swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(23.8%);
+        left: calc(-12%);
+        height: 16px;
+    }
+
+    #parte6 .swiper-button-next {
+        background-color: rgba(0, 0, 0, 0);
+        top: calc(23.8%);
+        right: calc(-12%);
+        height: 16px;
+    }
+
+    #parte6 .swiper-wrapper .swiper-slide {
+        flex-direction: column-reverse;
+        position: relative;
+        left: -2px;
+        width: 304px;
+        height: 100%;
+        padding-top: 13px;
+    }
+
+    #parte6 .swiper-container .swiper-pagination-bullets {
+        position: absolute;
+        bottom: inherit;
+        top: 251.34px;
+        text-align: center;
+        z-index: 2;
+        height: fit-content;
+        left: 0;
+    }
+
+    #parte6 .swiper-pagination-bullets .swiper-pagination-bullet {
+        width: 9.29px;
+        height: 9.75px;
+        margin: 0 4.645px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        opacity: 1;
+        background: transparent;
+    }
+
+    #parte6 .swiper-pagination-bullets .swiper-pagination-bullet-active {
+        background-color: #ffffff;
+    }
+
+    #parte6 .swiper-slide:not(.swiper-slide-active) .cont-tit {
+        background: none;
+        display: none;
+        padding: 0;
+    }
+
+    #parte6 .swiper-slide .cont-tit {
+        display: block;
+        min-height: auto;
+        margin-bottom: 0;
+        padding: 12px 25px 40px 23px;
+    }
+
+    #parte6 .cont-tit .epig {
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: #262626;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 13px;
+        text-transform: uppercase;
+    }
+
+    #parte6 .cont-tit .tit {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 14px;
+    }
+
+    #parte6 .cont-tit .baj {
+        font-size: 13px;
+        line-height: 140%;
+    }
+
+    #parte6 .swiper-slide .img-wrap {
+        width: 100%;
+    }
+
+    #parte6 .img-wrap img {
+        width: 100%;
+    }
+
+    #parte6 .img-wrap .desktop {
+        display: none;
+    }
+
+    #parte6 .img-wrap .mobile {
+        display: block;
+        width: 100%;
+        max-height: 261px;
+    }
+
+    #parte6 .swiper-pagination-bullets .swiper-pagination-bullet-active {
+        background-color: #B7131B;
+    }
+
+    #parte6 .swiper-pagination-bullets .swiper-pagination-bullet {
+        border: 1px solid #B7131B;
+    }
+
+    #parte6 .cont-tit .tit {
+        margin-bottom: 13.83px;
+    }
+
+    #parte6 .cont-tit .tit  {
+        line-height: 22px;
+    }
+
+    #parte6 .swiper-wrapper .swiper-slide {
+        width: 280px;
+    }
+}
