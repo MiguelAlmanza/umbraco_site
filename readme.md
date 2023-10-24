@@ -1,6 +1,7 @@
 this Project is to practice umbraco 10 and c# 
 ### Objective:
-- [https://www.mercedes-benz.com.uy/]replicate the site Mercedez Benz Uruguay 
+  
+- [replicate the site Mercedez Benz Uruguay ](https://www.mercedes-benz.com.uy/)
 
 ### progress
 the first page to replicate is Model 
