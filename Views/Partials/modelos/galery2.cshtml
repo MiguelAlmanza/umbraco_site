@@ -1,5 +1,6 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.PublishedContent
 @{
     var items = Model.Value<IEnumerable<IPublishedElement>>("g2swiper");
     if (items != null) {
@@ -46,7 +47,7 @@
                                         </div>
                                         <div class="img-wrap">
                                             <img class="desktop" src="@image.MediaUrl()" alt="@image.Name">                               
-                                            <img class="mobile" src="@image.MediaUrl()" alt="@image.Name">                               
+                                            <img class="mobile" src="@image.GetCropUrl(width:320,height:400)" alt="@image.Name">                               
                                         </div>
                                     </div>
                                 }
