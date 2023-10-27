@@ -1,0 +1,182 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Core.Models
+   
+@{
+    var versions = Model.Value<BlockListModel>("versions");
+    
+    if(versions!=null||versions.Any())
+    {          
+        var title = Model.Value<string>("VtitleSection");
+        if(string.IsNullOrEmpty(title))
+        {
+            title = $"Escoge tu {@Model.Name}";
+        }
+        
+        <section id="versiones" class="tabs-center">
+            <div class="link"></div>
+            <div class="cont-tit">
+                <h2 class="tit">
+                    @title
+                </h2>
+                <nav class="cont-tabs tabs-main">
+                    @foreach (var version in versions)
+                    {
+                        if (version.Settings.Value<String>("hide") == "False")
+                        {
+                            <button class="tablink" id="version-button" value="##i##">%%version##i##_nombre%%</button>
+                        }
+                    }
+                </nav>
+                <div class="barra"></div>
+                <nav class="cont-tabs tabs-icon" id="iframe-icons">
+                    <button class="tablink" id="external">Exterior</button>
+                    <button class="tablink" id="internal">Interior</button>
+                </nav>
+            </div>
+
+            <div class="cont-iframe">
+                <!-- logo 360 -->
+                @* AÑADIR VALIDACION PARA ESTE LOGO *@
+                <img class="logo_360" id="logo_360" src="/%%_prontus_id%%/imag/v1/icon/360.png">
+                    
+                <!-- iframe selector modelos -->
+                <div id="iframe-container" style="text-align: center"></div>
+
+                %%_loop_artic(1, 10)%%
+                    %%if(version##i##_nombre)%%
+                <!-- información modelo -->
+                <div class="color-selector hide" id="colores-##i##">
+                    <p class="color-text">Color seleccionado: <span class="bold">Verde Oliva</span> </p>
+                    <ul id="list_exterior">
+                        %%if(version##i##_ex_nombre1)%%%%if(version##i##_ex_color1)%%
+                        <li color-text="%%version##i##_ex_nombre1%%" ex="%%version##i##_ex_iframe1%%" style="background-color: %%version##i##_ex_color1%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre2)%%%%if(version##i##_ex_color2)%%
+                        <li color-text="%%version##i##_ex_nombre2%%" ex="%%version##i##_ex_iframe2%%" style="background-color: %%version##i##_ex_color2%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre3)%%%%if(version##i##_ex_color3)%%
+                        <li color-text="%%version##i##_ex_nombre3%%" ex="%%version##i##_ex_iframe3%%" style="background-color: %%version##i##_ex_color3%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre4)%%%%if(version##i##_ex_color4)%%
+                        <li color-text="%%version##i##_ex_nombre4%%" ex="%%version##i##_ex_iframe4%%" style="background-color: %%version##i##_ex_color4%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre5)%%%%if(version##i##_ex_color5)%%
+                        <li color-text="%%version##i##_ex_nombre5%%" ex="%%version##i##_ex_iframe5%%" style="background-color: %%version##i##_ex_color5%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre6)%%%%if(version##i##_ex_color6)%%
+                        <li color-text="%%version##i##_ex_nombre6%%" ex="%%version##i##_ex_iframe6%%" style="background-color: %%version##i##_ex_color6%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre7)%%%%if(version##i##_ex_color7)%%
+                        <li color-text="%%version##i##_ex_nombre7%%" ex="%%version##i##_ex_iframe7%%" style="background-color: %%version##i##_ex_color7%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre8)%%%%if(version##i##_ex_color8)%%
+                        <li color-text="%%version##i##_ex_nombre8%%" ex="%%version##i##_ex_iframe8%%" style="background-color: %%version##i##_ex_color8%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre9)%%%%if(version##i##_ex_color9)%%
+                        <li color-text="%%version##i##_ex_nombre9%%" ex="%%version##i##_ex_iframe9%%" style="background-color: %%version##i##_ex_color9%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_ex_nombre10)%%%%if(version##i##_ex_color10)%%
+                        <li color-text="%%version##i##_ex_nombre10%%" ex="%%version##i##_ex_iframe10%%" style="background-color: %%version##i##_ex_color10%%;"></li>
+                        %%/if%%%%/if%%
+                    </ul>
+                    <ul id="list_interior">
+                        %%if(version##i##_in_nombre1)%%%%if(version##i##_in_color1)%%
+                        <li color-text="%%version##i##_in_nombre1%%" in="%%version##i##_in_iframe1%%" style="background-color: %%version##i##_in_color1%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre2)%%%%if(version##i##_in_color2)%%
+                        <li color-text="%%version##i##_in_nombre2%%" in="%%version##i##_in_iframe2%%" style="background-color: %%version##i##_in_color2%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre3)%%%%if(version##i##_in_color3)%%
+                        <li color-text="%%version##i##_in_nombre3%%" in="%%version##i##_in_iframe3%%" style="background-color: %%version##i##_in_color3%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre4)%%%%if(version##i##_in_color4)%%
+                        <li color-text="%%version##i##_in_nombre4%%" in="%%version##i##_in_iframe4%%" style="background-color: %%version##i##_in_color4%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre5)%%%%if(version##i##_in_color5)%%
+                        <li color-text="%%version##i##_in_nombre5%%" in="%%version##i##_in_iframe5%%" style="background-color: %%version##i##_in_color5%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre6)%%%%if(version##i##_in_color6)%%
+                        <li color-text="%%version##i##_in_nombre6%%" in="%%version##i##_in_iframe6%%" style="background-color: %%version##i##_in_color6%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre7)%%%%if(version##i##_in_color7)%%
+                        <li color-text="%%version##i##_in_nombre7%%" in="%%version##i##_in_iframe7%%" style="background-color: %%version##i##_in_color7%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre8)%%%%if(version##i##_in_color8)%%
+                        <li color-text="%%version##i##_in_nombre8%%" in="%%version##i##_in_iframe8%%" style="background-color: %%version##i##_ex_color8%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre9)%%%%if(version##i##_in_color9)%%
+                        <li color-text="%%version##i##_in_nombre9%%" in="%%version##i##_in_iframe9%%" style="background-color: %%version##i##_ex_color9%%;"></li>
+                        %%/if%%%%/if%%
+                        %%if(version##i##_in_nombre10)%%%%if(version##i##_in_color10)%%
+                        <li color-text="%%version##i##_ex_nombre10%%" in="%%version##i##_in_iframe10%%" style="background-color: %%version##i##_ex_color10%%;"></li>
+                        %%/if%%%%/if%%
+                    </ul>
+                </div>
+                    %%/if%%
+                %%/_loop_artic%%
+
+                <div class="car-info">
+                    %%_loop_artic(1, 10)%%
+                        %%if(version##i##_nombre)%%
+                    <ul class="detail hide" id="detail-##i##">
+                        %%if(version##i##_motor)%%
+                        <li>
+                            <p class="txt"><span class="bold">Motor:</span>%%version##i##_motor%%</p>
+                        </li>
+                        %%/if%%
+                        %%if(version##i##_transmision)%%
+                        <li>
+                            <p class="txt"><span class="bold">Transmisión:</span>%%version##i##_transmision%%</p>
+                        </li>
+                        %%/if%%
+                        %%if(version##i##_max_potencia)%%
+                        <li>
+                            <p class="txt"><span class="bold">Potencia:</span>%%version##i##_max_potencia%%</p>
+                        </li>
+                        %%/if%%
+                        %%if(version##i##_max_potencia)%%
+                        <li>
+                            <p class="txt"><span class="bold">Torque:</span>%%version##i##_max_torque%%</p>
+                        </li>
+                        %%/if%%
+                    </ul>
+
+                    <div class="model hide" id="model-##i##">
+                        <div class="cont-tit desktop">
+                            <p class="pref">VERSIÓN</p>
+                            <h3 class="tit">%%version##i##_nombre%%</h3>
+                        </div>
+                        <div class="cont-price">
+                            %%if(texto_valor_version##i##)%%
+                            <div class="price">
+                                <p class="pref">PRECIO DESDE</p>
+                                <p class="number">%%texto_valor_version##i##%%</p>
+                            </div>
+                            %%/if%%
+                            %%if(texto_cuota_version##i##)%%
+                            <div class="price desktop">
+                                <p class="pref referentFee">CUOTA REFERENCIAL</p>
+                                <p class="number lightblue">%%texto_cuota_version##i##%%</p>
+                            </div>
+                            %%/if%%
+                        </div>
+                    </div>
+                        %%/if%%
+                    %%/_loop_artic%%
+
+
+                    <div class="cont-legal desktop">
+                        %%if(titulo_aviso)%%<p class="txt-legal">%%_txt_titulo_aviso%%</p>%%/if%%
+                        <p class="txt-legal txt-light">%%bajada_aviso%% %%if(link_aviso)%%<a href="%%link_aviso%%" %%if(cmb_target_aviso)%%target="%%cmb_target_aviso%%"%%/if%%>%%text_aviso%%</a>%%/if%%</p>
+                    </div>
+                </div>
+                <!-- /información modelo -->
+            </div>
+            %%if(height_iframe)%%<div id="height-iframe" class="hide">%%height_iframe%%</div>%%/if%%
+            %%if(width_iframe)%%<div id="width-iframe" class="hide">%%width_iframe%%</div>%%/if%%
+        </section>
+        
+
+    }
+}
